@@ -37,7 +37,7 @@ class CustomFilters:
     async def authorized_usetting(self, _, message):
         uid = (message.from_user or message.sender_chat).id
         chat_id = message.chat.id
-        isExists = False
+        isExists = True
         if uid == OWNER_ID or (uid in user_data and (user_data[uid].get('is_auth', False) or user_data[uid].get('is_sudo', False))) or (chat_id in user_data and user_data[chat_id].get('is_auth', False)):
             isExists = True
         elif message.chat.type == ChatType.PRIVATE:

@@ -37,7 +37,7 @@ async def authorize(client, message):
             else:
                 msg = 'Topic Already Authorized!'
     else:
-        update_user_ldata(id_, 'is_auth', True)
+        update_user_ldata(id_, 'is_auth', False)
         if tid_:
             update_user_ldata(id_, 'topic_ids', [tid_])
             msg = 'Topic Authorized!'

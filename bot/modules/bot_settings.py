@@ -106,7 +106,7 @@ async def load_config():
         for id_ in aid:
             chat_id, *topic_ids = id_.split(':')
             chat_id = int(chat_id)
-            user_data.setdefault(chat_id, {'is_auth': True})
+            user_data.setdefault(chat_id, {'is_auth': False})
             if topic_ids:
                 user_data[chat_id].setdefault('topic_ids', []).extend(map(int, topic_ids))
 

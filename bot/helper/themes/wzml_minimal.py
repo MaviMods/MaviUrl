@@ -6,7 +6,7 @@ class WZMLStyle:
     ST_BN1_URL = 'https://t.me/mavibot_support'
     ST_BN2_NAME = 'Update Channel'
     ST_BN2_URL = 'https://t.me/MODSMAVI'
-    ST_MSG = '''<i>This bot can download all your Mega|Terabox|torrents link to telegram content.</i>\n\n"```/leech your_link```"\n\n**Features /us:**\n• Custom Thumbnail\n• Custom Caption\n• Direct Upload To Other Chats\n
+    ST_MSG = '''<i>This bot can download all your Mega|Terabox|torrents link to telegram content.</i>\n\n<code>/leech your_link</code>\n\n<b>Features /us:</b>\n• Custom Thumbnail\n• Custom Caption\n• Direct Upload To Other Chats\n
 <b>Type {help_command} to get a list of available commands</b>'''
     ST_BOTPM = '''<i>Now, This bot will send all your files and links here. Start Using ...</i>'''
     ST_UNAUTH = '''<i>You Are not authorized user! Deploy your own WZML-X Mirror-Leech bot</i>'''

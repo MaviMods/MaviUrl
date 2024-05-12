@@ -37,7 +37,7 @@ async def authorize(client, message):
             else:
                 msg = 'Topic Already Authorized!'
     else:
-        update_user_ldata(id_, 'is_auth', False)
+        update_user_ldata(id_, 'is_auth', True)
         if tid_:
             update_user_ldata(id_, 'topic_ids', [tid_])
             msg = 'Topic Authorized!'
@@ -69,7 +69,7 @@ async def unauthorize(client, message):
         update_user_ldata(id_, 'topic_ids', tids_)
     if id_ not in user_data or user_data[id_].get('is_auth'):
         if not tids_:
-            update_user_ldata(id_, 'is_auth', False)
+            update_user_ldata(id_, 'is_auth', True)
         if DATABASE_URL:
             await DbManger().update_user_data(id_)
         msg = 'Unauthorized'

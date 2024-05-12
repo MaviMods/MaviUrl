@@ -21,7 +21,7 @@ class CustomFilters:
         if bool(uid == OWNER_ID or (uid in user_data and (user_data[uid].get('is_auth', False) or user_data[uid].get('is_sudo', False)))):
             return True
         
-        auth_chat = False
+        auth_chat = True
         chat_id = message.chat.id
         if chat_id in user_data and user_data[chat_id].get('is_auth', False):
             if len(topic_ids := user_data[chat_id].get('topic_ids', [])) == 0:

@@ -530,6 +530,6 @@ async def ytdlleech(client, message):
 
 
 bot.add_handler(MessageHandler(ytdl, filters=command(
-    BotCommands.YtdlCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))
+    BotCommands.YtdlCommand) & CustomFilters.sudo & ~CustomFilters.blacklisted))
 bot.add_handler(MessageHandler(ytdlleech, filters=command(
     BotCommands.YtdlLeechCommand) & CustomFilters.authorized & ~CustomFilters.blacklisted))

@@ -218,7 +218,6 @@ def get_readable_message():
             msg += BotTheme('BAR', Bar=f"{get_progress_bar_string(download.progress())} {download.progress()}")
             msg += BotTheme('PROCESSED', Processed=f"{download.processed_bytes()} of {download.size()}")
             msg += BotTheme('STATUS', Status=download.status(), Url=msg_link)
-            msg += BotTheme('ETA', Eta=download.eta())
             msg += BotTheme('SPEED', Speed=download.speed())
             msg += BotTheme('ELAPSED', Elapsed=get_readable_time(elapsed))
             msg += BotTheme('ENGINE', Engine=download.eng())

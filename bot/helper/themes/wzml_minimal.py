@@ -189,6 +189,8 @@ class WZMLStyle:
     ELAPSED =           '\n┠<b>⏰ Time:</b> {Elapsed}'
     ENGINE =            '\n┠<b>⚙️ Engine:</b> {Engine}'
     STA_MODE =          '\n┠<b>💠 Mode:</b> {Mode}'
+    SEEDERS =           '\n┠<b>🍁 Seeders:</b> {Seeders} | '
+    LEECHERS =                                           '<b>♦️ Leechers:</b> {Leechers}'
 
     ####--------SEEDING----------
     SEED_SIZE =      '\n┠<b>💾 Size: </b>{Size}'

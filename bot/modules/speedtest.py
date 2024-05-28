@@ -24,29 +24,29 @@ async def speedtest(_, message):
     result = test.results.dict()
     path = result['share']
     string_speed = f'''
-➲ <b><i>SPEEDTEST INFO</i></b>
-┠ <b>Upload:</b> <code>{get_readable_file_size(result['upload'] / 8)}/s</code>
-┠ <b>Download:</b>  <code>{get_readable_file_size(result['download'] / 8)}/s</code>
-┠ <b>Ping:</b> <code>{result['ping']} ms</code>
-┠ <b>Time:</b> <code>{result['timestamp']}</code>
-┠ <b>Data Sent:</b> <code>{get_readable_file_size(int(result['bytes_sent']))}</code>
-┖ <b>Data Received:</b> <code>{get_readable_file_size(int(result['bytes_received']))}</code>
+🚀 <b>𝙎𝙥𝙚𝙚𝙙𝙏𝙚𝙨𝙩 𝙄𝙣𝙛𝙤</b>
+┠<b>Upload:</b> <code>{get_readable_file_size(result['upload'] / 8)}/s</code>
+┠<b>Download:</b>  <code>{get_readable_file_size(result['download'] / 8)}/s</code>
+┠<b>Ping:</b> <code>{result['ping']} ms</code>
+┠<b>Time:</b> <code>{result['timestamp']}</code>
+┠<b>Data Sent:</b> <code>{get_readable_file_size(int(result['bytes_sent']))}</code>
+┖<b>Data Received:</b> <code>{get_readable_file_size(int(result['bytes_received']))}</code>
 
-➲ <b><i>SPEEDTEST SERVER</i></b>
-┠ <b>Name:</b> <code>{result['server']['name']}</code>
-┠ <b>Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
-┠ <b>Sponsor:</b> <code>{result['server']['sponsor']}</code>
-┠ <b>Latency:</b> <code>{result['server']['latency']}</code>
-┠ <b>Latitude:</b> <code>{result['server']['lat']}</code>
-┖ <b>Longitude:</b> <code>{result['server']['lon']}</code>
+⚡ <b>𝙎𝙥𝙚𝙚𝙙𝙏𝙚𝙨𝙩 𝙎𝙚𝙧𝙫𝙚𝙧</b>
+┠<b>Name:</b> <code>{result['server']['name']}</code>
+┠<b>Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
+┠<b>Sponsor:</b> <code>{result['server']['sponsor']}</code>
+┠<b>Latency:</b> <code>{result['server']['latency']}</code>
+┠<b>Latitude:</b> <code>{result['server']['lat']}</code>
+┖<b>Longitude:</b> <code>{result['server']['lon']}</code>
 
-➲ <b><i>CLIENT DETAILS</i></b>
-┠ <b>IP Address:</b> <code>{result['client']['ip']}</code>
-┠ <b>Latitude:</b> <code>{result['client']['lat']}</code>
-┠ <b>Longitude:</b> <code>{result['client']['lon']}</code>
-┠ <b>Country:</b> <code>{result['client']['country']}</code>
-┠ <b>ISP:</b> <code>{result['client']['isp']}</code>
-┖ <b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
+🐌 <b>𝘾𝙡𝙞𝙚𝙣𝙩 𝘿𝙚𝙩𝙖𝙞𝙡𝙨</b>
+┠<b>IP Address:</b> <code>{result['client']['ip']}</code>
+┠<b>Latitude:</b> <code>{result['client']['lat']}</code>
+┠<b>Longitude:</b> <code>{result['client']['lon']}</code>
+┠<b>Country:</b> <code>{result['client']['country']}</code>
+┠<b>ISP:</b> <code>{result['client']['isp']}</code>
+┖<b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
 '''
     try:
         pho = await sendMessage(message, string_speed, photo=path)
